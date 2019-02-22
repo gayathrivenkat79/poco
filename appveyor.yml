@@ -8,3 +8,8 @@ build_script:
   - cmake -H. -Bcmake-build -G"Visual Studio 14 2015 Win64" -DODBC_ROOT_LIBRARY_DIRS="C:/Program Files/Microsoft SDKs/Windows/v7.0/Lib/x64" -DODBC_ROOT_INCLUDE_DIRS="C:/Program Files/Microsoft SDKs/Windows/v7.0/Include" -DENABLE_DATA_MYSQL=OFF -DCMAKE_INSTALL_PREFIX=dist_win -DCMAKE_BUILD_TYPE=RELEASE
   - cmake --build cmake-build
   - cmake --build cmake-build --target INSTALL
+
+artifacts:
+  - path: dist_win
+    name: poco_1_9_1_vc14_2015_win64_release.zip
+    type: zip
